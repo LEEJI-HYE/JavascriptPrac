@@ -1,0 +1,387 @@
+<html><head>
+	<title>정보올림피아드 문제 풀이</title>
+</head>
+<body>
+	<h3>501: 출력 - 자가진단 1</h3><br>
+	<h5>아래 "출력 예"와 같이 출력되는 프로그램을 작성하시오.</h5>
+	<h6>출력 예: </h6><br>
+	<h6>Fun Programming!</h6>
+
+
+    <h2>풀이 -----------------------------------------------</h2>
+	<!-- 문제 풀기 -->
+	<button onclick="solve();">출력</button>
+	<p id="result501"></p>
+
+	<script>
+		// javascript 작성
+         function solve501(){
+         	var text = "Fun Programming!";
+         	document.getElementById('result501').innerHTML = text;
+         }
+	</script>
+
+
+<hr><!-- 문제구분 하는 태그 hr -->
+
+
+    <h3>533 : 선택제어문 - 자가진단 6 </h3><br>
+	<h5>남자는 'M' 여자는 'F'로 나타내기로 하고 18세 이상을 성인이라고 하자. 성별('M', 'F')과 나이를 입력받아 "MAN'(성인남자), "WOMAN"(성인여자), "BOY"(미성년남자), "GIRL"(미성년여자)을 구분하여 출력하는 프로그램을 작성하시오.</h5>
+	<h6>입력 예: </h6><p>
+	</p><h6>F 15</h6>
+	<h6>출력 예 : </h6><p>
+	</p><h6>GIGL</h6>
+
+    <h2>풀이 -----------------------------------------------</h2>
+
+
+	<!-- ====================== 문제 풀기 ====================== -->
+
+	
+	<!-- 입력 -->
+	성별 : <input type="text" id="gender">
+	나이 : <input type="text" id="age">
+
+	<button onclick="solve();">출력</button>
+	<p id="result533"></p>
+
+	<script>
+		// javascript 작성
+         function solve533(){
+         	var gender = document.getElementById('gender').value;
+         	var age = document.getElementById('age').value;
+
+         	console.log("gender : " + gender);
+         	console.log("age : " + age);
+           // 18세 이상은 성이능로 구분하기 때문에 
+           // 성인 구분 기준을 적는다
+         	var adultAge = 18;
+
+          //출력 데이터 준비
+         	var man = "MAN";
+         	var woman = "WOMAN";
+         	var boy = "boy";
+         	var girl = "girl";
+
+
+            // 18세 이상일 때
+            if(age >= 18){
+            	// 남자인 경우
+            	if(gender =="M"){
+            		document.getElementById('result533').innerHTML = man;
+            	}
+            	// 여자인 경우
+            	if(gender == "F"){
+            		document.getElementById('result533').innerHTML = woman;
+            	}
+            } 
+            
+            if(age < 18){
+            	// 남자인 경우
+            	if(gender == "M"){
+            		document.getElementById('result533').innerHTML = boy;
+            	}
+            	//여자인 경우
+            	if(gender == "F"){
+            		document.getElementById('result533').innerHTML = girl;
+            	}
+            }
+            
+         }
+
+	</script>
+
+
+<hr><!-- 문제구분 하는 태그 hr -->
+
+
+<h3>528: 선택제어문 - 자가진단 1</h3><br>
+	<h5>정수를 입력받아 첫 줄에 입력 받은 숫자를 출력하고 둘째 줄에 음수이면 "minus" 라고 출력하는 프로그램을 작성하시오.</h5>
+	<h6>입력 예: </h6><p>
+	</p><h6>-5</h6>
+    <h6>출력 예: </h6><p>
+	</p><h6>-5<p></p>
+	    minus</h6><p>
+	</p><h6>입력 예 2: </h6><p>
+	</p><h6>5
+	</h6><h6>출력 예 2: </h6><p></p>
+	<h6>5</h6>
+
+
+    <h2>풀이 -----------------------------------------------</h2>
+	<!-- 문제 풀기 -->
+
+	<!-- 입력 
+	 1. 정수를 입력받는다.
+	 2. 입력 받은 숫자를 출력한다.
+	 3. 음수이면 둘째줄에 'minus' 라고 출력한다. 
+	-->
+
+	<!-- 1. 정수를 입력받는다. -->
+	정수 : <input type="text" id="number">
+	<button onclick="solve();">출력</button>
+
+    <!-- 2. 입력받느 숫자를 출력 -->
+	<p id="result528"></p>
+	<p id="result528-1"></p>
+
+	<script>
+		// javascript 작성
+         function solve528(){
+         	var number = document.getElementById('number').value;
+         	console.log("number : " + number);
+
+            // 3. 음수이면 minus라고 출력
+             if(number < 0){
+             	 //음수일 경우
+                 //입력받은 숫자 출력
+                 document.getElementById('result528').innerHTML = number;
+             	 //minus라고 출력
+             	 document.getElementById('result528-1').innerHTML = "minus";
+             }
+          
+         }
+
+	</script>
+
+<hr><!-- 문제구분 하는 태그 hr -->
+
+<h3>529 : 선택제어문 - 자가진단2</h3><br>
+
+<h5>“몸무게+100-키”를 비만수치 공식이라고 하자.
+키와 몸무게를 자연수로 입력받아 첫 번째 줄에 비만수치를 출력하고, 비만수치가 0보다 크면 다음줄에 비만("Obesity")이라는 메시지를 출력하는 프로그램을 작성하시오. (출력형식은 아래 출력 예를 참고하세요.)</h5>
+ <h6>입력 예 : </h6><p>
+ </p><h6>155 60</h6>
+ <h6>출력 예 : </h6><p></p>
+ <h6>5<p>
+     Obesity</p></h6>
+
+ <h2>풀이 -----------------------------------------------</h2>
+  <!-- 문제 풀기 -->
+
+  <!-- 입력부 -->
+  키 : <input type="text" id="height"><p>
+  몸무게 : <input type="text" id="weight"></p><p>
+  <button onclick="solve529()">입력</button>
+
+  <!-- 출력부 -->
+  </p><p id="result529"></p>
+  <p id="result529-1"></p>
+
+  <script>
+  	function solve529(){
+  		//사용자가 입력한 키, 몸무게 data 를 받아오기
+  		var hei = document.getElementById('height').value;
+  		var wei = document.getElementById('weight').value;
+  		var sum = Number(wei) + 100 - Number(hei);
+
+  		// result529 id 값을 가진 태그에 키 데이터를 보여주기
+  		if(sum > 0){
+  			document.getElementById('result529').innerHTML = sum;
+  			document.getElementById('result529-1').innerHTML = "Obesity";
+        }else{
+        	document.getElementById('result529').innerHTML = sum;
+        }
+       
+  	}
+  </script> 
+
+<hr>
+
+<h3>532 : 선택제어문 - 자가진단5</h3><br>
+
+<h5>두 개의 실수를 입력받아 모두 4.0 이상이면 "A", 모두 3.0 이상이면 "B", 아니면 "C" 라고 출력하는 프로그램을 작성하시오. </h5>
+<h6>입력 예 : </h6><p>
+</p><h6>4.3 3.5</h6>
+<h6>출력 예 : </h6><p>
+</p><h6>B</h6>
+<h6>입력 예2 : </h6><p></p>
+<h6>4.0 2.9</h6>
+<h6>출력 예2 : </h6><p></p>
+<h6>C</h6>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+     <!--입력부 -->
+      실수1 : <input type="text" id="NumBer1"><p>
+      실수2 : <input type="text" id="NumBer2"></p><p>
+      <button onclick="solve532()">입력</button>
+
+     <!-- 출력부 -->
+     </p><p id="result532"></p>
+
+     <script>
+       function solve532(){
+        var NumBer1 = document.getElementById('NumBer1').value;
+        var NumBer2 = document.getElementById('NumBer2').value;
+
+        if(NumBer1>= 4.0 && NumBer2>= 4.0){
+          document.getElementById('result532').innerHTML = "A";
+        } else if(NumBer1>=3.0 && NumBer2>=3.0){
+          document.getElementById('result532').innerHTML = "B";
+        } else{
+          document.getElementById('result532').innerHTML = "C";
+        }
+       }
+     </script>
+
+<hr>
+
+<h3>530 : 선택제어문 - 자가진단3</h3><br>
+
+<h5>나이를 입력받아 20살 이상이면 "adult"라고 출력하고 그렇지 않으면 몇 년후에 성인이 되는지를 "○ years later"라는 메시지를 출력하는 프로그램을 작성하시오.</h5>
+<h6>입력 예 : </h6><p></p>
+<h6>18</h6>
+<h6>출력 예 : </h6><p></p>
+<h6>2 years later</h6>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+      <!-- 입력부 -->
+      나이 : <input type="text" id="Ages"><p></p>
+      <button onclick="solve530()">입력</button>
+
+      <!-- 출력부 -->
+      <p id="result530"></p>
+
+      <script>
+        function solve530(){
+          var Ages = document.getElementById('Ages').value;
+          var teenager = (20 - Ages + "years later");
+ 
+          if(Ages >= 20){
+            document.getElementById('result530').innerHTML = "adult";
+          } else{
+            document.getElementById('result530').innerHTML = teenager;
+          }
+        }
+      </script>
+
+<hr>
+
+<h3>534 : 선택제어문 - 자가진단7</h3><br>
+
+<h5>영문 대문자를 입력받아 'A'이면 “Excellent”, 'B'이면 “Good”, 'C'이면 “Usually”, 
+'D'이면 “Effort”, 'F'이면 “Failure”, 그 외 문자이면 “error” 라고 출력하는 프로그램을 작성하시오.</h5><p></p>
+
+<h6>입력 예 : </h6><p></p>
+<h6>B</h6><p></p>
+<h6>출력 예 : </h6><p></p>
+<h6>Good</h6><p></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+      <!-- 입력부 -->
+     문자 :  <input type="text" id="letter">
+      <button onclick="solve534()">입력</button>
+
+      <!-- 출력부 -->
+      <p id="result534"></p>
+
+      <script>
+        function solve534(){
+          var Letter = document.getElementById('letter').value;
+
+          if(Letter=="A"){
+            document.getElementById('result534').innerHTML = "Excellent";
+          } else if(Letter=="B"){
+            document.getElementById('result534').innerHTML = "Good";
+          } else if(Letter=="C"){
+            document.getElementById('result534').innerHTML = "Usually";
+          } else if(Letter=="D"){
+            document.getElementById('result534').innerHTML = "Effort";
+          } else if(Letter=="F"){
+            document.getElementById('result534').innerHTML = "Failure";
+          } else{
+            document.getElementById('result534').innerHTML = "error";
+          } 
+        }
+      </script>
+
+<hr>
+
+<h6>122 : 선택제어문 - 형성평가3</h6><br>
+<h5>년도를 입력받아 윤년(leap year)인지 평년(common year)인지 판단하는 프로그램을 작성하시오.</h5><p></p>
+
+<h6>입력 예 : </h6><p></p>
+<h6>2008</h6><p></p>
+<h6>출력 예 : </h6><p></p>
+<h6>leap year</h6><p></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+      <!-- 입력부 -->
+      년도 : <input type="text" id="yerasnumber">
+      <button onclick="solve122()">입력</button>
+
+      <!-- 출력부 -->
+      <p id="result122"></p>
+
+      <script>
+        function solve122(){
+          var yerasnumber = document.getElementById('yerasnumber').value;
+
+          if(yerasnumber%400==0){
+            document.getElementById('result122').innerHTML = "leap year"
+          } else if(yerasnumber%4==0 && yerasnumber%100!==0){
+            document.getElementById('result122').innerHTML = "leap year"
+          } else{
+            document.getElementById('result122').innerHTML = "common year"
+          }
+        }
+      </script>
+
+<hr>
+
+<h6>535 : 선택제어문 - 자가진단8</h6><br>
+<h5>4.5 이하의 평점을 입력받아 그 값에 따라 다음과 같이 출력하는 프로그램을 작성하시오.
+(C, C++, Java는 switch ~ case문 사용) (Python은 if ~ else사용)
+단 입력는 0이상 4.5 이하이다.
+4.0 이상 : "scholarship"
+3.0 이상 : "next semester"
+2.0 이상 : "seasonal semester"
+2.0 미만 : "retake"​
+&gt;&gt; 실수를 정수형(int)으로 변환하여 분기한다. (예 - switch( (int)score ))
+
+</h5><p></p>
+
+<h6>입력 예 : </h6><p></p>
+<h6>3.5</h6><p></p>
+<h6>출력 예 : </h6><p></p>
+<h6>next semester</h6><p></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+      <!-- 입력부 -->
+      평점 : <input type="text" id="grade">
+      <button onclick="solve535()">입력</button>
+
+      <!-- 출력부 -->
+      <p id="result535"></p>
+
+      <script>
+        function solve535(){
+          var grade = document.getElementById('result535').value;
+
+          switch(gradeLevel){
+            case 1: 
+              (gradeLevel1 >= 4) = "scholarship";
+              break;
+            case 2:
+              (gradeLeve2 >= 3) =  "next semester";
+              break;
+            case 3:
+               (gradeLeve3 >= 2) = "seasonal semester";
+              break;
+            case 4:  
+               (gradeLeve4 < 2) = "retake"​;
+              break;
+        }
+      </script>
+
+</body></html>
