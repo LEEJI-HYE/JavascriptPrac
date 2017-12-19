@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>JavaScript Numbers</h2>
+
+	<p id="demo"></p>
+
+	<script>
+		var x = 10;
+		var y = 20;
+		var z = x + y;
+
+		document.getElementById("demo").innerHTML = z;
+
+		// 이 코드는 알 수 있었던 사실?
+		// 변수 z는 변수끼리도 더할 수 있구나!
+
+	</script>
+
+<hr/><!-- 문제구분 하는 태그 hr -->
+
+	<p> If you add two strings, the result will be a string: </p>
+
+	<p id="demo1"></p>
+
+	<script >
+		var x = "10";
+		var y = "20";
+		var z = x + y;
+
+		document.getElementById("demo1").innerHTML = z;
+
+		// 문자열 끼리도 더할 수 있구나!
+	</script>
+
+<hr/><!-- 문제구분 하는 태그 hr -->
+
+    <p>If you add a number and a string, the result will be a string:</p>
+
+    <p id="demo2"></p>
+
+    <script >
+    	var x = 10;
+    	var y = "20";
+    	var z = x + y;
+
+    	document.getElementById('demo2').innerHTML = z;
+
+    	// 숫자열과 문자열을 추가하면 결과는 문자열이 된다!
+    </script>
+
+<hr/>
+
+ <p>문자열과 숫자를 추가하면 결과는 문자열이됩니다:</p>
+
+ <p id="demo3"></p>
+
+ <script >
+ 	var x = "10";
+ 	var y = 20;
+
+ 	document.getElementById('demo3').innerHTML = "결과는 다음과 같습니다." + x + y;
+
+ 	// 문자열이랑 숫자열을 추가하면 결과는 문자열이 된다!
+ </script>
+ <hr/>
+
+  <p> 일반적인 실수는 이 결과가 30일 것으로 예상하는 것입니다. </p>
+
+  <p id="demo4"></p>
+
+  <script >
+  	var x = 10;
+  	var y = 20;
+
+  	document.getElementById('demo4').innerHTML = "결과는 다음과 같습니다." + x + y;
+
+  	// 숫자열끼리의 추가이지만 문자열이 들어갔기 때문에 결과는 문자열이 된다!
+  </script>
+
+<hr/>
+
+  <p>일반적인 실수는 이 결과가 102030일 것으로 예상하는 것입니다.</p>
+
+  <p id="demo5"></p>
+
+  <script >
+  	var x = 10;
+  	var y = 20;
+  	var z = "30";
+  	var result = x + y + z;
+
+  	document.getElementById('demo5').innerHTML = result;
+  	// 숫자열과 문자열이 혼합되어 있는 경우 숫자열끼리는 추가가 된다
+  	//숫자열 다음의 문자열과는 추가가 되지 않는다!
+  </script>
+
+</body>
+</html>

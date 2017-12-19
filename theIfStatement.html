@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>If Statement</title>
+</head>
+<body>
+	<p> "좋은 날"을 표시하십시오. 시간이 18:00 미만인 경우 : </p>
+
+    <!-- 출력부 -->
+	<p id="demo">Good Evening</p>
+
+	<script >
+		// 시간이 18:00 미만인 경우 굿데이를 데모에서 가져온다.
+		if(new Date().getHours()<18){
+			document.getElementById("demo").innerHTML = "Good day!"
+		}
+	</script>
+
+<hr/>
+
+ <p>시간 기반 인사말을 표시하려면 버튼을 클릭하십시오.</p>
+
+ <button onclick="myFunction()">Try it</button>
+
+ <p id="demo1"></p>
+
+ <script>
+ 	function myFunction(){
+ 		var hour = new Date().getHours();
+ 		var greeting;
+
+ 		if(hour<18){
+ 			greeting = "Good day";
+ 		} else {
+ 			greeting = "Good evening";
+ 		}
+ 		document.getElementById("demo1").innerHTML = greeting;
+ 	}
+ </script>
+
+ <hr/>
+
+ <p> 시간 기반 인사말을 받으려면 버튼을 클릭하십시오. </p>
+
+ <button onclick="myFunction()">Try it</button>
+
+ <p id="demo2"></p>
+
+ <script >
+ 	function myFunction(){
+ 		var greeting;
+ 		var time = new Date(). getHours();
+ 		if(time<10){
+ 			greeting="Good mornig";
+ 		} else if (time < 20){
+ 			greeting = "Good day";
+ 		} else {
+ 			greeting = "Good evening"
+ 		}
+
+ 		document.getElementById('demo2').innerHTML=greeting;
+ 	}
+ </script> 
+
+</body>
+</html>
