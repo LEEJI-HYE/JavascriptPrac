@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+
+<body>
+
+  <h3>디버깅 연습</h3><br/>
+
+     <!-- 입력부 -->
+     <h1>for문 디버깅 연습</h1>
+     Number : <input type="text" id="input"/></p>
+     <button onclick="solve534()">입력</button>
+
+      <script>
+        //javaScript 작성
+      	function solve534(){
+            var text = document.getElementById('input').value;  
+            var plusText = "*";
+            for(var i = 0 ; i < 5; i++){
+              console.log(text);
+              text = text + plusText;
+            }
+        } 
+      </script>
+
+<hr>
+
+  <h3>디버깅 연습</h3><br/>
+
+     <!-- 입력부 -->
+     <h1>for문 디버깅 연습1</h1>
+     Number : <input type="text" id="input1"/></p>
+     <button onclick="solve5344()">입력</button>
+      <script>
+        //javaScript 작성
+        function solve5344(){
+            var text = document.getElementById('input1').value;  
+            var star = "*";
+            for(var i = 5 ; i > 0; i--){
+              for(var a = 1; a < i; a++){
+                star = star + "*";
+              }
+               console.log(star);
+                star = "*";
+            }
+        } 
+      </script>
+
+<hr/>
+
+<h3>544 : 반복제어문2 - 자가진단4</h3><br>
+
+<h5>100 이하의 정수를 입력받아서 입력받은 정수부터 100까지의 합을 출력하는 프로그램을 작성하시오.</h5><p></p>
+
+<h6>입력 예 : </h6></p>
+<h6>95</h6><p></p>
+<h6>출력 예 : </h6></p>
+<h6>585</h6></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+      <!-- 입력부 -->
+     정수 :  <input type="text" id="integer"/>
+      <button onclick="solve544()">입력</button>
+
+      <!-- 출력부 -->
+      <p id="result544"></p>
+
+      <script>
+        function solve544(){
+          var sum = 0; 
+
+          for (var i = 1; i <= 100; i++){
+            sum = sum + i;
+          }
+            console.log("sum : " + sum);
+          }
+
+      </script>
+
+<hr>
+
+</body>
+</html>
