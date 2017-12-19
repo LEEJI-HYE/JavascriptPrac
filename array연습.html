@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array연습하기</title>
+</head>
+<body>
+
+<h3>534 : 선택제어문 - 자가진단7</h3><br>
+
+<h5>영문 대문자를 입력받아 'A'이면 “Excellent”, 'B'이면 “Good”, 'C'이면 “Usually”, 
+'D'이면 “Effort”, 'F'이면 “Failure”, 그 외 문자이면 “error” 라고 출력하는 프로그램을 작성하시오.</h5><p></p>
+
+<h6>입력 예 : </h6><p></p>
+<h6>B</h6><p></p>
+<h6>출력 예 : </h6><p></p>
+<h6>Good</h6><p></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+      <!-- 입력부 -->
+     문자 :  <input type="text" id="letters"/>
+      <button onclick="solve534()">입력</button>
+
+      <!-- 출력부 -->
+      <p id="result534-1"></p>
+
+      <script>
+      	function solve534(){
+          var Letters = ["A","B","C","D","E","F"];
+          var Bigletter = document.getElementById('letters').value;
+          console.log("input : " + Bigletter)
+
+          if(Bigletter == Letters[0]){
+            document.getElementById('result534-1').innerHTML = "Excellent";
+          } else if(Bigletter == Letters[1]){
+            document.getElementById('result534-1').innerHTML = "Good";
+          } else if(Bigletter == Letters[2]){
+            document.getElementById('result534-1').innerHTML = "Usually";
+          } else if(Bigletter ==Letters[3]){
+            document.getElementById('result534-1').innerHTML = "Effort";
+          } else if(Bigletter == Letters[4]){
+            document.getElementById('result534-1').innerHTML = "Failure";
+          } else{
+            document.getElementById('result534-1').innerHTML = "error";
+          } 
+        } 
+      </script>
+
+<hr>
+
+
+
+
+</body>
+</html>
