@@ -97,8 +97,8 @@
  <!-- 문제 풀기-->
 
       <!-- 입력부 -->
-     Number1 :  <input type="text" id="input2"/>
-     Number2 :  <input type="text" id="input3"/>
+     Number1 :  <input type="text" id="input2"/></p>
+     Number2 :  <input type="text" id="input3"/></p>
       <button onclick="solve131()">입력</button>
 
       <!-- 출력부 -->
@@ -106,13 +106,20 @@
 
       <script>
         function solve131(){
-          var input2 = document.getElementById('input2').value;
-          var input3 = document.getElementById('input3').value;
+          var inputTag1 = Number(document.getElementById('input2').value);
+          var inputTag2 = Number(document.getElementById('input3').value);
+
+          if(inputTag1 > inputTag2){
+            var temp = inputTag1;
+            var inputTag1 = inputTag2;
+            var inputTag2 = temp;
+
+          }
 
           // console.log(input2 + "," + input3);
           var output = "";
-          for (var i = input2 ; i <= input3; i++){
-            output = output + i + "";
+          for (var i = inputTag1 ; i <= inputTag2; i++){
+            output = output + i + " ";
           }
             document.getElementById('result131'),innerHTML = output;
           }
