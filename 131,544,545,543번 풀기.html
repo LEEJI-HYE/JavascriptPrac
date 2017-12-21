@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>131 : 반복제어문2 - 형성평가2</h3><br/>
+    <h5>100 이하의 두 개의 정수를 입력받아 작은 수부터 큰 수까지 차례대로 출력하는 프로그램을 작성하시오.</h5>
+
+    <h6>입력 예 : </h6><p/>
+    <h6>10 5</h6>
+    <h6>출력 예 : </h6><p/>
+    <h6>5 6 7 8 9 10</h6>
+
+    <h2>풀이 -------------------------------------------------</h2>
+    <!-- 문제 풀기 -->
+    <!--입력부-->
+    Number1 : <input type="text" id="input1"/></p>
+    Number2 : <input type="text" id="input2"/></p>
+    <button onclick="solve131()">입력</button>
+    <!--출력부-->
+    <p id="result131"></p>
+    <script>
+        function solve131(){
+            var inputTag1 = Number(document.getElementById('input1').value);
+            var inputTag2 = Number(document.getElementById('input2').value);
+
+            if(inputTag1 > inputTag2){
+               var temp = inputTag1;
+               inputTag1 = inputTag2;
+               inputTag2 = temp;
+            }
+
+            // console.log(input1 + ", " + input2);
+            var output = "";
+            for(var i = inputTag1; i <= inputTag2; i++){
+               output = output + i + " ";
+            }
+
+            document.getElementById('result131').innerHTML = output;
+        }
+    </script>
+
+<hr/>
+
+<h3>544 : 반복제어문2 - 자가진단4</h3><br>
+
+<h5>100 이하의 정수를 입력받아서 입력받은 정수부터 100까지의 합을 출력하는 프로그램을 작성하시오.</h5></p>
+
+<h6>입력 예 : </h6></p>
+<h6>95</h6><p></p>
+<h6>출력 예 : </h6></p>
+<h6>585</h6></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+     <!-- 입력부 -->
+     정수 :  <input type="text" id="integer"/>
+      <button onclick="solve544()">입력</button>
+
+      <!-- 출력부 -->
+      <p id="result544"></p>
+
+      <script>
+        function solve544(){
+            var integerTag = Number(document.getElementById('integer').value);
+
+             console.log(integerTag);
+
+
+
+          var sum = 0; 
+          for (var i = 1; i <= 100; i++){
+            sum = sum + i;
+          }
+            console.log("sum : " + sum);
+          }
+
+      </script>
+
+<hr/>
+
+<h3>545 : 반복제어문2 - 자가진단5</h3></br>
+
+<h5>10개의 정수를 입력받아 3의 배수의 개수와 5의 배수의 개수를 각각 출력하는 프로그램을 작성하시오.</h5></p>
+
+<h6>입력 예 : </h6>
+<h6>10 15 36 99 100 19 46 88 87 13</h6>
+<h6>출력 예 : </h6>
+<h6>Multiples of 3 : 4</p>
+    Multiples of 5 : 3</h6></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+     <!-- 입력부 -->
+     numbers1 : <input type="text" id="number1"/></p>
+     numbers2 : <input type="text" id="number2"/></p>
+     numbers3 : <input type="text" id="number3"/></p>
+     numbers4 : <input type="text" id="number4"/></p>
+     numbers5 : <input type="text" id="number5"/></p>
+     numbers6 : <input type="text" id="number6"/></p>
+     numbers7 : <input type="text" id="number7"/></p>
+     numbers8 : <input type="text" id="number8"/></p>
+     numbers9 : <input type="text" id="number9"/></p>
+     numbers10 : <input type="text" id="number10"/></p>
+
+     <button onclick="solve545()">입력</button>
+
+     <!-- 출력부 -->
+     <p id="result545-1"></p>
+     <p id="result545-2"></p>
+
+     <script>
+         function solve545(){
+            var inputs1 = Number(document.getElementById('number1').value);
+            var inputs2 = Number(document.getElementById('number2').value);
+            var inputs3 = Number(document.getElementById('number3').value);
+            var inputs4 = Number(document.getElementById('number4').value);
+            var inputs5 = Number(document.getElementById('number5').value);
+            var inputs6 = Number(document.getElementById('number6').value);
+            var inputs7 = Number(document.getElementById('number7').value);
+            var inputs8 = Number(document.getElementById('number8').value);
+            var inputs9 = Number(document.getElementById('number9').value);
+            var inputs10 = Number(document.getElementById('number10').value);
+
+            var output = [inputs1,inputs2,inputs3,inputs4,inputs5,inputs6,inputs7,
+                        inputs8,inputs9,inputs10];
+
+            var inputsTag = 0;
+
+            for(var i = 1;  i < inputsTag; i++){
+
+            if(i % 3 == 0){
+            document.getElementById('result545-1').innerHTML = ("Multiples of 3 : " + = i);
+            } else (i % 5 == 0){
+            document.getElementById('result545-2').innerHTML = ("Multiples of 5 : " + = i);
+            }
+          }
+
+         }
+     </script>
+
+<hr/>
+
+<h3>543 : 반복제어문2 - 자가진단3</h3></br>
+
+<h5>하나의 정수를 입력받아 1부터 입력받은 정수까지의 짝수를 차례대로 출력하는 프로그램을 작성하시오.입력되는 정수는 50이하이다.</h5></p>
+
+<h6>입력 예 : </h6>
+<h6>10</h6>
+<h6>출력 예 : </h6>
+<h6>2 4 6 8 10</h6></p>
+
+ <h2>풀이 -----------------------------------------------</h2>
+ <!-- 문제 풀기-->
+
+     <!-- 입력부 -->
+     Number : <input type="text" id="input3"/>
+     <button onclick="solve543()">입력</button>
+
+     <!-- 출력부 -->
+     <p id="result543"></p>
+
+     <script>
+         function solve543(){
+            var inputNum = Number(document.getElementById('input3').value);
+
+             console.log(inputNum);
+
+ 
+         }
+     </script>
+
+
+
+</body>
+</html>
