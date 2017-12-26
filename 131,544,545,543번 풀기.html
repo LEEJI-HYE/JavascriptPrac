@@ -68,8 +68,6 @@
 
              console.log(integerTag);
 
-
-
           var sum = 0; 
           for (var i = 1; i <= 100; i++){
             sum = sum + i;
@@ -105,18 +103,16 @@
      numbers8 : <input type="text" id="number8"/></p>
      numbers9 : <input type="text" id="number9"/></p>
      numbers10 : <input type="text" id="number10"/></p>
-
      <button onclick="solve545()">입력</button>
 
      <!-- 출력부 -->
      <p id="result545-1"></p>
      <p id="result545-2"></p>
-       //10개의 정수를 입력받아서 각 입력부의 입력 숫자를 콘솔로그 이용하여 입력한대로 나오는지 테스트//
-       //입력받은 정수를 배열에 담아 3의 배수의 갯수를 세어서 콘솔로그 이용하여 갯수 나오는지 테스트//
-       //이볅받은 정수를 배열에 담아 5의 배수의 갯수를 세어서 콘솔로그 이용하여 갯수 나오는지 테스트//
-       //갯수를 result543에 뿌리기//
+     <p id="result545-3"></p>
+
      <script>
-         function solve545(){
+      function solve545(){
+
             var inputs1 = Number(document.getElementById('number1').value);
             var inputs2 = Number(document.getElementById('number2').value);
             var inputs3 = Number(document.getElementById('number3').value);
@@ -128,19 +124,43 @@
             var inputs9 = Number(document.getElementById('number9').value);
             var inputs10 = Number(document.getElementById('number10').value);
 
-            var output = [inputs1,inputs2,inputs3,inputs4,inputs5,inputs6,inputs7,
+         var outPut = [inputs1,inputs2,inputs3,inputs4,inputs5,inputs6,inputs7,
                         inputs8,inputs9,inputs10];
 
-            var inputsTag = 0;
+        var ment1 = 0;
+        var ment2 = 0;
+        var ment3 = 0;
 
-            for(var i = 1;  i < inputsTag; i++){
+            var count3 = 0;
+            var count5 = 0;
+            var count3N5 = 0;
 
-            if(i % 3 == 0){
-            document.getElementById('result545-1').innerHTML = ("Multiples of 3 : " + = i);
-            } else (i % 5 == 0){
-            document.getElementById('result545-2').innerHTML = ("Multiples of 5 : " + = i);
+            for(var i = 0;  i <= outPut.lenght; i++){
+
+            if(outPut[i] % 3 == 0){
+                count3++;
+            } else if (outPut[i] % 5 == 0){
+                count5++;
+            } else if (outPut[i] % 3 == 0 && outPut[i] %5 == 0){
+                count3--;
+                count5--;
+                count3N5++;
+
+                else if(count3 < 0){
+                    count3 = 0;
+                } else (count5 < 0){
+                    count5 = 0;
+                }
             }
-          }
+        ]
+
+            ment1 = "Multiples of 3 : " + count3;
+            ment2 = "Multiples of 5 : " + count5;
+            ment3 = "Multiples of 3 And 5 : " + count3N5;
+
+            document.getElementById('result545-1').innerHTML = ment1;
+            document.getElementById('result545-2').innerHTML = ment2;
+            document.getElementById('result545-3').innerHTML = ment3;
 
          }
      </script>

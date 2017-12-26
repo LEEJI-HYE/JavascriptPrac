@@ -86,7 +86,7 @@
 
 <h3>131 : 반복제어문2 - 형성평가2</h3><br>
 
-<h5>100 이하의 두 개의 정수를 입력받아 작은 수부터 큰 수까지 차례대로 출력하는 프로그램을 작성하시오.</h5><p></p>
+<h5>100 이하의 두 개의 정수를 입력받아 작은 수부터 큰 수까지 차례대로 출력하는 프로그램을 작성하시오.</h5></p>
 
 <h6>입력 예 : </h6></p>
 <h6>10 5</h6><p></p>
@@ -96,9 +96,9 @@
  <h2>풀이 -----------------------------------------------</h2>
  <!-- 문제 풀기-->
 
-      <!-- 입력부 -->
-     Number1 :  <input type="text" id="input2"/></p>
-     Number2 :  <input type="text" id="input3"/></p>
+     <!-- 입력부 -->
+     Number1 :  <input type="text" id="putin1"/></p>
+     Number2 :  <input type="text" id="putin2"/></p>
       <button onclick="solve131()">입력</button>
 
       <!-- 출력부 -->
@@ -106,22 +106,22 @@
 
       <script>
         function solve131(){
-          var inputTag1 = Number(document.getElementById('input2').value);
-          var inputTag2 = Number(document.getElementById('input3').value);
+          var inputTag1 = Number1(document.getElementById('putin1').value);
+          var inputTag2 = Number2(document.getElementById('putin2').value);
 
           if(inputTag1 > inputTag2){
             var temp = inputTag1;
             var inputTag1 = inputTag2;
-            var inputTag2 = temp;
+            var inputTag1 = temp;
 
           }
 
-          // console.log(input2 + "," + input3);
+          // console.log(putin1 + "," + putin2);
           var output = "";
           for (var i = inputTag1 ; i <= inputTag2; i++){
             output = output + i + " ";
           }
-            document.getElementById('result131'),innerHTML = output;
+            document.getElementById('result131').innerHTML = output;
           }
 
       </script>
